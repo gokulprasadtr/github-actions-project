@@ -6,9 +6,7 @@ on:
 
 jobs:
   compile:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: Set up JDK 17
@@ -35,4 +33,4 @@ jobs:
       - name: Run gitleaks scan
         uses: gitleaks/gitleaks-action@v2
         with:
-          args: detect --source=. --report-path=gitleaks-report.json --report-format=json --verbose
+          args: "detect --source=. --report-path=gitleaks-report.json --report-format=json --verbose"
